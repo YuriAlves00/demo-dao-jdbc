@@ -39,18 +39,22 @@ public class Program {
 		}
 		System.out.println("");
 		
-		System.out.println("===== TEST 3: findAll =====");
+//		System.out.println("===== TEST 4: Insert =====");
+//		System.out.println("");
+//		Seller newSeller = new Seller(null, "John Wick", "johnwick@gmail.com", new Date(), 50000.0, department);
+//		sellerDao.insert(newSeller);
+//		System.out.println("Inserted ! \nNew ID: " + newSeller.getId());
+//		System.out.println("");
+//		
+		System.out.println("===== TEST 5: Update =====");
 		System.out.println("");
-		Seller newSeller = new Seller(null, "John Wick", "johnwick@gmail.com", new Date(), 50000.0, department);
-		sellerDao.insert(newSeller);
-		System.out.println("Inserted ! \nNew ID: " + newSeller.getId());
+		seller = sellerDao.findById(9);
+		seller.setBaseSalary(500000.0);
+		sellerDao.update(seller);
+		System.out.println("Update Completed!");
 		System.out.println("");
 		
-		
-		
-		
-		
-		System.out.println("");
+//		System.out.println("");
 		System.out.println("=========== END ============");
 
 	}
